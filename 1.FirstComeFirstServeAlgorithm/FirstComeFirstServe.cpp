@@ -15,7 +15,7 @@ FirstComeFirstServe::FirstComeFirstServe(std::vector<int> &arrivalTime, std::vec
 void FirstComeFirstServe::findCompletionTime()
 {
     completionTime.resize(numberOfProcesses);
-    completionTime[0] = burstTime[0];
+    completionTime[0] = arrivalTime[0] + burstTime[0];
     for (int i = 1; i < numberOfProcesses; i++)
     {
         completionTime[i] = std::max(completionTime[i - 1], arrivalTime[i]) + burstTime[i];
