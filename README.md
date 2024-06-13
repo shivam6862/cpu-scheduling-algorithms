@@ -1,30 +1,98 @@
-# CPU Scheduling Algorithms:
+# CPU Scheduling Algorithms
 
-CPU scheduling algorithms are fundamental mechanisms used by operating systems to manage the execution of processes in a way that optimizes various performance metrics. These algorithms determine the order in which processes run, ensuring efficient use of the CPU and providing a balance between system responsiveness and resource utilization.
+CPU scheduling algorithms are crucial for managing how processes are assigned to the CPU for execution. Effective scheduling maximizes CPU utilization, minimizes wait time, and ensures fair resource distribution among processes. Here’s an in-depth look at various CPU scheduling algorithms and key terms used in scheduling:
 
-## Types of Scheduling Algorithms
+### Types of Scheduling Algorithms
 
-1. **FCFS (First Come First Serve):** Processes are executed in the order they arrive.
+1. **First Come First Serve (FCFS):**
 
-2. **SJF (Shortest Job First):** Executes the shortest job first.
+   - **Description:** Processes are executed in the order they arrive in the ready queue.
+   - **Advantages:**
+     - Simple to implement.
+     - Predictable as the order of execution is straightforward.
+   - **Disadvantages:**
+     - Can lead to long waiting times, especially for shorter processes if a long process arrives first (Convoy effect).
+     - Not suitable for time-sharing systems.
 
-3. **SJF with Preemption:** Allows preemption of a running process if a shorter job arrives.
+2. **Shortest Job First (SJF):**
 
-4. **Round Robin (RR):** Each process gets a fixed time on the CPU, then moves to the back of the queue.
+   - **Description:** Executes the process with the shortest burst time first.
+   - **Advantages:**
+     - Minimizes average waiting time and turnaround time.
+   - **Disadvantages:**
+     - Difficult to predict the burst time accurately.
+     - Can lead to starvation if short processes keep arriving.
 
-5. **Pre-emptive Priority Scheduling:** Priority-based scheduling with preemption.
+3. **Round Robin (RR):**
 
-6. **Mix Burst Time:** Handles both CPU and I/O burst times.
+   - **Description:** Each process gets a fixed time slice (quantum) in a cyclic order.
+   - **Advantages:**
+     - Fair allocation of CPU time.
+     - Good for time-sharing systems as it ensures no process waits too long.
+   - **Disadvantages:**
+     - Average waiting time can be high.
+     - Performance heavily depends on the length of the time quantum.
 
-7. **Multi-Level Queue Scheduling:** Processes are divided into multiple queues with different priority levels.
+4. **Pre-emptive Priority Scheduling:**
+   - **Description:** Processes are assigned priorities, and the CPU is allocated to the process with the highest priority. If a new process arrives with a higher priority than the current running process, the CPU is preempted and assigned to the new process.
+   - **Advantages:**
+     - Can ensure important processes get more CPU time.
+   - **Disadvantages:**
+     - Can lead to starvation of low-priority processes.
+     - Priority inversion can occur, where a high-priority process is waiting for a lower-priority one.
 
-8. **Multilevel Feedback Queue Scheduling:** Allows processes to move between queues based on their behavior to reduce starvation.
+### CPU Scheduling Terms
 
-# CPU Scheduling Terms:
+- **Arrival Time:**
 
-- **Arrival Time:** Time when a process arrives in the ready queue.
-- **Burst Time:** Time required by a process to complete its execution.
-- **Completion Time:** Time at which a process completes its execution.
-- **Turnaround Time:** Total time taken by a process to complete from arrival to completion.
-- **Waiting Time:** Total time a process spends waiting in the ready queue.
-- **Response Time:** Time taken to respond to the first input.
+  - **Definition:** The time at which a process arrives in the ready queue.
+  - **Example:** If a process arrives at the system at 0 seconds, its arrival time is 0.
+
+- **Burst Time:**
+
+  - **Definition:** The total time required by a process for its execution on the CPU.
+  - **Example:** If a process needs 5 seconds of CPU time to complete, its burst time is 5 seconds.
+
+- **Completion Time:**
+
+  - **Definition:** The time at which a process completes its execution and exits the CPU.
+  - **Example:** If a process starts at 2 seconds and finishes at 7 seconds, its completion time is 7 seconds.
+
+- **Turnaround Time:**
+
+  - **Definition:** The total time taken by a process from arrival to completion. It is calculated as:
+    - **Example:** If a process arrives at 0 seconds and completes at 10 seconds, its turnaround time is 10 seconds.
+
+- **Waiting Time:**
+
+  - **Definition:** The total time a process spends waiting in the ready queue. It is calculated as:
+  - **Example:** If a process has a turnaround time of 10 seconds and a burst time of 5 seconds, its waiting time is 5 seconds.
+
+- **Response Time:**
+  - **Definition:** The time taken from when a process arrives in the ready queue to the first time it gets the CPU. It is important in interactive systems where the promptness of response is crucial.
+  - **Example:** If a process arrives at 0 seconds and gets the CPU for the first time at 2 seconds, its response time is 2 seconds.
+
+### Detailed Example for Understanding
+
+**FCFS:**
+
+![1](/IMAGE/1.png)
+
+**SJF:**
+
+![2](/IMAGE/2.png)
+
+**Round Robin (Quantum = 2):**
+
+![3](/IMAGE/3.png)
+
+**Pre-emptive Priority:**
+
+![4](/IMAGE/4.png)
+
+### Summary
+
+- **FCFS** is simple but can cause long waiting times for short processes.
+- **SJF** is efficient but requires knowing the burst times in advance.
+- **Round Robin** ensures fair CPU allocation but can lead to high average waiting times if the time quantum is not well chosen.
+- **Pre-emptive Priority Scheduling** can prioritize important processes but can cause lower-priority processes to starve.
