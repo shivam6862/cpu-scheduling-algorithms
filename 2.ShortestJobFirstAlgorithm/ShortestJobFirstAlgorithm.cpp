@@ -67,6 +67,7 @@ void ShortestJobFirstAlgorithm::findAverageTime()
 
 void ShortestJobFirstAlgorithm::printTable()
 {
+    std::cout << "\nShortest Job First Algorithm\n";
     std::cout << std::setw(10) << "Process"
               << std::setw(15) << "Arrival Time"
               << std::setw(13) << "Burst Time"

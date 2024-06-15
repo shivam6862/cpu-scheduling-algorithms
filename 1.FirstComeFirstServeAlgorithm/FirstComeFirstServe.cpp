@@ -65,7 +65,7 @@ void FirstComeFirstServe::findAverageTime()
 
 void FirstComeFirstServe::printTable()
 {
-    std::cout << "First Come First Serve Scheduling Algorithm\n\n";
+    std::cout << "First Come First Serve Scheduling Algorithm\n";
     std::cout << std::left << std::setw(10) << "Process"
               << std::setw(15) << "Arrival Time"
               << std::setw(12) << "Burst Time"

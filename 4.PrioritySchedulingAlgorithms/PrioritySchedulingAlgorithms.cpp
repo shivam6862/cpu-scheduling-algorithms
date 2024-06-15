@@ -92,6 +92,7 @@ void PrioritySchedulingAlgorithms::findAverageTime()
 
 void PrioritySchedulingAlgorithms::printTable()
 {
+    std::cout << "\nPriority Scheduling Algorithm\n";
     std::cout << std::left << std::setw(10) << "Process"
               << std::setw(11) << "Priority"
               << std::setw(15) << "Arrival Time"

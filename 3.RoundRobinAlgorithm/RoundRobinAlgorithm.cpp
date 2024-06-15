@@ -110,6 +110,7 @@ void RoundRobinAlgorithm::findAverageTime()
 
 void RoundRobinAlgorithm::printTable()
 {
+    std::cout << "\nRound Robin Algorithm\n";
     std::cout << std::left << std::setw(10) << "Process"
               << std::setw(15) << "Arrival Time"
               << std::setw(13) << "Burst Time"

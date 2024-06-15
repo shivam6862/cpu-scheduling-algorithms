@@ -90,6 +90,10 @@ CPU scheduling algorithms are crucial for managing how processes are assigned to
 
 ![4](/IMAGE/4.png)
 
+**Compare**
+
+![5](/IMAGE/5.png)
+
 ### Summary
 
 - **FCFS** is simple but can cause long waiting times for short processes.
