@@ -23,6 +23,11 @@ a {
   --bg-color: #ffffff;
   --primary-color: #007bff;
   --secondary-color: #f5f5f5;
+
+  --ft-400: 1rem;
+  --br-400: 0.375rem;
+  --pd-300: 0.75rem;
+  --pd-400: 1rem;
 }
 
 /* SPINNER */

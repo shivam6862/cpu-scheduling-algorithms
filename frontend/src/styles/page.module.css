@@ -6,6 +6,26 @@
   width: -webkit-fill-available;
 }
 
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 90%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.error {
+  color: red;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+}
+
 .box {
   display: flex;
   flex-direction: column;

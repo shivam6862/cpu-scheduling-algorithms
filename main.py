@@ -6,13 +6,13 @@ app = Flask(__name__)
 
 cors.CORS(app)
 
-@app.route('/run-code', methods=['GET'])
+@app.route('/run-code', methods=['POST'])
 def run_code():
-    # data = request.get_json()
-    # data = data['data']
-    
-    # with open('data.txt', 'w') as f:
-        # f.write(data)
+    data = request.get_json()
+    data = data['data']
+
+    with open('data.txt', 'w') as f:
+        f.write(data)
             
     try:
         exe_file_name = 'output.exe'
