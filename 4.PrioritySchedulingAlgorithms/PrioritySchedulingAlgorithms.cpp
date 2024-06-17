@@ -114,11 +114,10 @@ void PrioritySchedulingAlgorithms::printTable()
                   << std::setw(16) << responseTime[i] << std::endl;
     }
 
-    std::cout << "Average Waiting Time: " << std::fixed << std::setprecision(2) << (float)totalWaitingTime / numberOfProcesses << std::endl;
+    std::cout << "\nAverage Waiting Time: " << std::fixed << std::setprecision(2) << (float)totalWaitingTime / numberOfProcesses << std::endl;
     std::cout << "Average Turnaround Time: " << std::fixed << std::setprecision(2) << (float)totalTurnAroundTime / numberOfProcesses << std::endl;
 }
 
 PrioritySchedulingAlgorithms::~PrioritySchedulingAlgorithms()
 {
-    std::cout << "Priority Scheduling Algorithm object is destroyed\n";
 }

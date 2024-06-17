@@ -86,7 +86,7 @@ void FirstComeFirstServe::printTable()
     }
 
     std::cout << "\nAverage Waiting Time: " << (float)totalWaitingTime / numberOfProcesses << "\n";
-    std::cout << "Average Turn Around Time: " << (float)totalTurnAroundTime / numberOfProcesses << "\n";
+    std::cout << "Average Turnaround Time: " << (float)totalTurnAroundTime / numberOfProcesses << "\n";
 }
 
 void FirstComeFirstServe::printGanttChart()
@@ -148,5 +148,4 @@ void FirstComeFirstServe::printGanttChart()
 
 FirstComeFirstServe::~FirstComeFirstServe()
 {
-    std::cout << "\nFirst Come First Serve Scheduling Algorithm Ended\n";
 }

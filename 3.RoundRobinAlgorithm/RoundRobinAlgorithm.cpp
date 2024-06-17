@@ -132,10 +132,9 @@ void RoundRobinAlgorithm::printTable()
 
     std::cout << std::endl;
     std::cout << "Average waiting time: " << (double)totalWaitingTime / numberOfProcesses << std::endl;
-    std::cout << "Average turnaround time: " << (double)totalTurnAroundTime / numberOfProcesses << std::endl;
+    std::cout << "Average Turnaround Time: " << (double)totalTurnAroundTime / numberOfProcesses << std::endl;
 }
 
 RoundRobinAlgorithm::~RoundRobinAlgorithm()
 {
-    std::cout << "Round Robin Algorithm object is destroyed\n";
 }

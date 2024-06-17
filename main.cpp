@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 #include "1.FirstComeFirstServeAlgorithm/FirstComeFirstServe.h"
 #include "2.ShortestJobFirstAlgorithm/ShortestJobFirstAlgorithm.h"
 #include "3.RoundRobinAlgorithm/RoundRobinAlgorithm.h"
@@ -8,8 +9,27 @@
 
 int main()
 {
-    std::vector<int> arrivalTime = {0, 1, 2, 3};
-    std::vector<int> burstTime = {5, 3, 8, 6};
+    std::ifstream infile;
+    infile.open("data.txt");
+
+    if (!infile)
+    {
+        std::cerr << "Error: File not found!" << std::endl;
+        return 1;
+    }
+
+    std::vector<int> arrivalTime;
+    std::vector<int> burstTime;
+    std::vector<int> priority;
+
+    while (!infile.eof())
+    {
+        int a, b, p;
+        infile >> a >> b >> p;
+        arrivalTime.push_back(a);
+        burstTime.push_back(b);
+        priority.push_back(p);
+    }
 
     FirstComeFirstServe fcfs(arrivalTime, burstTime);
     fcfs.findCompletionTime();
@@ -30,7 +50,6 @@ int main()
     rr.findAverageTime();
     rr.printTable();
 
-    std::vector<int> priority = {2, 1, 3, 2};
     PrioritySchedulingAlgorithms psa(arrivalTime, burstTime, priority);
     psa.findCompletionTime();
     psa.printTable();
@@ -39,4 +58,5 @@ int main()
     return 0;
 }
 
-// g++ main.cpp 1.FirstComeFirstServeAlgorithm/FirstComeFirstServe.cpp 2.ShortestJobFirstAlgorithm/ShortestJobFirstAlgorithm.cpp 3.RoundRobinAlgorithm/RoundRobinAlgorithm.cpp 4.PrioritySchedulingAlgorithms/PrioritySchedulingAlgorithms.cpp -o output && ./output
+// g++ main.cpp 1.FirstComeFirstServeAlgorithm/FirstComeFirstServe.cpp 2.ShortestJobFirstAlgorithm/ShortestJobFirstAlgorithm.cpp 3.RoundRobinAlgorithm/RoundRobinAlgorithm.cpp 4.PrioritySchedulingAlgorithms/PrioritySchedulingAlgorithms.cpp -o output
+// ./output

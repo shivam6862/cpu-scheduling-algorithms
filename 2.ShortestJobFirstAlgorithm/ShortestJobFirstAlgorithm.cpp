@@ -96,11 +96,4 @@ void ShortestJobFirstAlgorithm::printTable()
 
 ShortestJobFirstAlgorithm::~ShortestJobFirstAlgorithm()
 {
-    arrivalTime.clear();
-    burstTime.clear();
-    completionTime.clear();
-    waitingTime.clear();
-    turnAroundTime.clear();
-    responseTime.clear();
-    std::cout << "\nShortest Job First Algorithm Object Destroyed\n";
 }
