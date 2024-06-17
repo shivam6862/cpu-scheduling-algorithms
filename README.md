@@ -4,7 +4,7 @@ CPU scheduling algorithms are crucial for managing how processes are assigned to
 
 ## Cloning the Repository
 
-To get started, first clone the repository to your local machine:
+To get started, first clone the repository:
 
 ```bash
 git clone https://github.com/shivam6862/cpu-scheduling-algorithms
@@ -13,7 +13,7 @@ cd cpu-scheduling-algorithms
 
 ## Frontend Setup
 
-The frontend is built using modern web technologies and requires Node.js to run. Follow these steps to set up and start the frontend development server:
+The frontend is built using Nextjs and requires Node.js to run. Follow these steps to set up and start the frontend development server:
 
 1. Navigate to the `frontend` directory:
 
@@ -26,6 +26,10 @@ The frontend is built using modern web technologies and requires Node.js to run.
    npm install
    npm run build
    npm start
+   ```
+3. After running the commands, the server will start, and the application will be accessible at
+   ```bash
+   http://localhost:3000
    ```
 
 ## Backend Setup
@@ -59,7 +63,11 @@ The backend is implemented in Python. It uses a virtual environment for managing
 
 4. Run the backend application:
    ```bash
-   python mani.py
+   python main.py
+   ```
+5. After running the commands, the server will start, and the application will be accessible at
+   ```bash
+     http://localhost:5000
    ```
 
 ## Types of Scheduling Algorithms
@@ -116,7 +124,7 @@ The backend is implemented in Python. It uses a virtual environment for managing
 - **Completion Time:**
 
   - **Definition:** The time at which a process completes its execution and exits the CPU.
-  - **Example:** If a process starts at 2 seconds and finishes at 7 seconds, its completion time is 7 seconds.
+  - **Example:** If a process starts at 2 seconds and finishes at 7 seconds, its completion time is 5 seconds.
 
 - **Turnaround Time:**
 
@@ -130,7 +138,6 @@ The backend is implemented in Python. It uses a virtual environment for managing
 
 - **Response Time:**
   - **Definition:** The time taken from when a process arrives in the ready queue to the first time it gets the CPU. It is important in interactive systems where the promptness of response is crucial.
-  - **Example:** If a process arrives at 0 seconds and gets the CPU for the first time at 2 seconds, its response time is 2 seconds.
 
 ## Frontend Page
 
@@ -142,3 +149,32 @@ The backend is implemented in Python. It uses a virtual environment for managing
 - **SJF** is efficient but requires knowing the burst times in advance.
 - **Round Robin** ensures fair CPU allocation but can lead to high average waiting times if the time quantum is not well chosen.
 - **Pre-emptive Priority Scheduling** can prioritize important processes but can cause lower-priority processes to starve.
+
+## References
+
+This project references various resources for understanding CPU scheduling algorithms. Below are the relevant links to YouTube videos and playlists that provide in-depth explanations of different scheduling techniques:
+
+1. **Complete Playlist on CPU Scheduling Algorithms**:
+
+   - [YouTube Playlist](https://www.youtube.com/playlist?list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p)
+
+2. **All Time in CPU Scheduling Algorithms**:
+
+   - [YouTube Video](https://youtu.be/n7Owxwfr6Ko?si=wPUCbu_3gStEIlCw)
+
+3. **First-Come, First-Served (FCFS) Scheduling**:
+
+   - [YouTube Video](https://youtu.be/MZdVAVMgNpA?si=CRLvEcEKYalJNz2P)
+
+4. **Shortest Job First (SJF) Scheduling**:
+
+   - [YouTube Video](https://youtu.be/VCIVXPoiLpU?si=fTrCM-M0rQTYpEs_)
+
+5. **Round Robin (RR) Scheduling**:
+
+   - [YouTube Video](https://youtu.be/TxjIlNYRZ5M?si=NpXYVyLG_79EtDXw)
+
+6. **Priority Preemptive Scheduling Algorithm (PPSA)**:
+   - [YouTube Video](https://youtu.be/rsDGfFxSgiY?si=VyjIvVoqH-lhsSL_)
+
+These resources are useful for understanding the theoretical and practical aspects of CPU scheduling algorithms.
