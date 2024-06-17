@@ -2,7 +2,67 @@
 
 CPU scheduling algorithms are crucial for managing how processes are assigned to the CPU for execution. Effective scheduling maximizes CPU utilization, minimizes wait time, and ensures fair resource distribution among processes. Here’s an in-depth look at various CPU scheduling algorithms and key terms used in scheduling:
 
-### Types of Scheduling Algorithms
+## Cloning the Repository
+
+To get started, first clone the repository to your local machine:
+
+```bash
+git clone https://github.com/shivam6862/cpu-scheduling-algorithms
+cd cpu-scheduling-algorithms
+```
+
+## Frontend Setup
+
+The frontend is built using modern web technologies and requires Node.js to run. Follow these steps to set up and start the frontend development server:
+
+1. Navigate to the `frontend` directory:
+
+   ```bash
+   cd frontend
+   ```
+
+2. Install the necessary dependencies and start the development server:
+   ```bash
+   npm install
+   npm run build
+   npm start
+   ```
+
+## Backend Setup
+
+The backend is implemented in Python. It uses a virtual environment for managing dependencies. Follow these steps to set up the backend:
+
+1. Create a virtual environment:
+
+   ```bash
+   python -m venv .venv
+   ```
+
+2. Activate the virtual environment:
+
+   - On Windows:
+
+     ```bash
+     ./venv/Scripts/activate
+     ```
+
+   - On macOS/Linux:
+     ```bash
+     source .venv/bin/activate
+     ```
+
+3. Install the required Python packages:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run the backend application:
+   ```bash
+   python mani.py
+   ```
+
+## Types of Scheduling Algorithms
 
 1. **First Come First Serve (FCFS):**
 
@@ -41,7 +101,7 @@ CPU scheduling algorithms are crucial for managing how processes are assigned to
      - Can lead to starvation of low-priority processes.
      - Priority inversion can occur, where a high-priority process is waiting for a lower-priority one.
 
-### CPU Scheduling Terms
+## CPU Scheduling Terms
 
 - **Arrival Time:**
 
@@ -72,29 +132,11 @@ CPU scheduling algorithms are crucial for managing how processes are assigned to
   - **Definition:** The time taken from when a process arrives in the ready queue to the first time it gets the CPU. It is important in interactive systems where the promptness of response is crucial.
   - **Example:** If a process arrives at 0 seconds and gets the CPU for the first time at 2 seconds, its response time is 2 seconds.
 
-### Detailed Example for Understanding
+## Frontend Page
 
-**FCFS:**
+![image.png](/image.png)
 
-![1](/IMAGE/1.png)
-
-**SJF:**
-
-![2](/IMAGE/2.png)
-
-**Round Robin (Quantum = 2):**
-
-![3](/IMAGE/3.png)
-
-**Pre-emptive Priority:**
-
-![4](/IMAGE/4.png)
-
-**Compare**
-
-![5](/IMAGE/5.png)
-
-### Summary
+## Summary
 
 - **FCFS** is simple but can cause long waiting times for short processes.
 - **SJF** is efficient but requires knowing the burst times in advance.

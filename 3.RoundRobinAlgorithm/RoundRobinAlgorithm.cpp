@@ -131,7 +131,7 @@ void RoundRobinAlgorithm::printTable()
     }
 
     std::cout << std::endl;
-    std::cout << "Average waiting time: " << (double)totalWaitingTime / numberOfProcesses << std::endl;
+    std::cout << "Average Waiting Time: " << (double)totalWaitingTime / numberOfProcesses << std::endl;
     std::cout << "Average Turnaround Time: " << (double)totalTurnAroundTime / numberOfProcesses << std::endl;
 }
 
