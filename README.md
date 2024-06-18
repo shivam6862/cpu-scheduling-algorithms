@@ -139,7 +139,11 @@ The backend is implemented in Python. It uses a virtual environment for managing
 - **Response Time:**
   - **Definition:** The time taken from when a process arrives in the ready queue to the first time it gets the CPU. It is important in interactive systems where the promptness of response is crucial.
 
-## Frontend Page
+## Frontend Input Page
+
+![image.png](/input.png)
+
+## Frontend Output Page
 
 ![image.png](/image.png)
 
