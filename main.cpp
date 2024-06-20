@@ -41,7 +41,6 @@ int main()
 
     ShortestJobFirstAlgorithm sjf(arrivalTime, burstTime);
     sjf.findCompletionTime();
-    sjf.findAverageTime();
     sjf.printTable();
 
     int quantumTime = 2;
@@ -53,7 +52,6 @@ int main()
     PrioritySchedulingAlgorithms psa(arrivalTime, burstTime, priority);
     psa.findCompletionTime();
     psa.printTable();
-    psa.findAverageTime();
 
     return 0;
 }

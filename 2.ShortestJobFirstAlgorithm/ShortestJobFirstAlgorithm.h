@@ -19,7 +19,6 @@ private:
 public:
     ShortestJobFirstAlgorithm(std::vector<int> &arrivalTime, std::vector<int> &burstTime);
     void findCompletionTime();
-    void findAverageTime();
     void printTable();
     ~ShortestJobFirstAlgorithm();
 };

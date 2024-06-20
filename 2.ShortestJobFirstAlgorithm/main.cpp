@@ -11,7 +11,6 @@ int main()
     ShortestJobFirstAlgorithm sjf(arrivalTime, burstTime);
 
     sjf.findCompletionTime();
-    sjf.findAverageTime();
     sjf.printTable();
 
     return 0;

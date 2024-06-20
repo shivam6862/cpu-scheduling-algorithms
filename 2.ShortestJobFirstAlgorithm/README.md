@@ -22,15 +22,9 @@ The `ShortestJobFirstAlgorithm` class has the following methods:
 
   - Calculates the completion time for each process. The completion time is the time at which a process finishes execution. The algorithm selects the process with the smallest burst time that has arrived and schedules it next.
 
-- **findWaitingTime()**:
-
   - Calculates the waiting time for each process. The waiting time is the total time a process spends waiting in the ready queue. It is determined by subtracting the arrival time and burst time from the completion time.
 
-- **findTurnAroundTime()**:
-
   - Calculates the turnaround time for each process. The turnaround time is the total time taken from the arrival to the completion of the process. It is determined by subtracting the arrival time from the completion time.
-
-- **findAverageTime()**:
 
   - Calculates the average waiting time and the average turnaround time. These metrics provide an overall sense of how efficiently the scheduler is performing.
 

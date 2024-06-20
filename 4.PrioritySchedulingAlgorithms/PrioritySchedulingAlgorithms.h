@@ -20,7 +20,6 @@ private:
 public:
     PrioritySchedulingAlgorithms(std::vector<int> &arrivalTime, std::vector<int> &burstTime, std::vector<int> &priority);
     void findCompletionTime();
-    void findAverageTime();
     void printTable();
     ~PrioritySchedulingAlgorithms();
 };

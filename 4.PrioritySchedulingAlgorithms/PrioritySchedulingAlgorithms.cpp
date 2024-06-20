@@ -81,15 +81,6 @@ void PrioritySchedulingAlgorithms::findCompletionTime()
     }
 }
 
-void PrioritySchedulingAlgorithms::findAverageTime()
-{
-    for (int i = 0; i < numberOfProcesses; i++)
-    {
-        totalWaitingTime += waitingTime[i];
-        totalTurnAroundTime += turnAroundTime[i];
-    }
-}
-
 void PrioritySchedulingAlgorithms::printTable()
 {
     std::cout << "\nPriority Scheduling Algorithm\n";

@@ -5,8 +5,8 @@ import "../styles/globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CPU Scheduler Visualizatio",
-  description: "Visualize CPU scheduling algorithms",
+  title: "CPU Scheduler Visualizations",
+  description: "Visualizations of CPU scheduling algorithms",
 };
 
 export default function RootLayout({

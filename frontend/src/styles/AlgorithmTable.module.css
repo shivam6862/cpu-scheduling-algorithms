@@ -6,11 +6,13 @@
   width: -webkit-fill-available;
   padding: 0rem 2rem;
 }
+
 .container > h2 {
   font-size: 1.5rem;
   font-weight: 500;
   color: #333;
 }
+
 .container > table {
   width: 100%;
   border-collapse: collapse;

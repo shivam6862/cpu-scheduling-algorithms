@@ -56,15 +56,6 @@ void ShortestJobFirstAlgorithm::findCompletionTime()
     }
 }
 
-void ShortestJobFirstAlgorithm::findAverageTime()
-{
-    for (int i = 0; i < numberOfProcesses; i++)
-    {
-        totalWaitingTime += waitingTime[i];
-        totalTurnAroundTime += turnAroundTime[i];
-    }
-}
-
 void ShortestJobFirstAlgorithm::printTable()
 {
     std::cout << "\nShortest Job First Algorithm\n";

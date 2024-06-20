@@ -13,7 +13,6 @@ int main()
 
     psa.findCompletionTime();
     psa.printTable();
-    psa.findAverageTime();
 
     return 0;
 }

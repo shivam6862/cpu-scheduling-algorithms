@@ -22,11 +22,7 @@ The `RoundRobinAlgorithm` class has the following methods:
 
   - Calculates the completion time for each process. The completion time is the time at which a process finishes execution. The algorithm cycles through the processes, allocating the quantum time and updating the remaining burst times until all processes are completed.
 
-- **findWaitingTime()**:
-
   - Calculates the waiting time for each process. The waiting time is the total time a process spends waiting in the ready queue. It is determined by subtracting the arrival time and burst time from the completion time.
-
-- **findTurnAroundTime()**:
 
   - Calculates the turnaround time for each process. The turnaround time is the total time taken from the arrival to the completion of the process. It is determined by subtracting the arrival time from the completion time.
 
