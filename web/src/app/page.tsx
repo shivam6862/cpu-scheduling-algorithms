@@ -52,7 +52,7 @@ export default function Home() {
     }
     try {
       setIsFetching(true);
-      const response = await fetch("http://127.0.0.1:5000/run-code", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/run-code`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

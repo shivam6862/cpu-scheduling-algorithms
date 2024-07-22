@@ -6,6 +6,10 @@ app = Flask(__name__)
 
 cors.CORS(app)
 
+@app.route('/health' , methods=['GET'])
+def health():
+    return jsonify({'status': 'ok'})
+
 @app.route('/run-code', methods=['POST'])
 def run_code():
     data = request.get_json()

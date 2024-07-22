@@ -1,0 +1,54 @@
+version: "3.8"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./docker/api.Dockerfile
+      target: ${DOCKER_TARGET}
+    ports:
+      - "5000:5000"
+    container_name: api-cpu-scheduler
+    working_dir: /app
+    command: /bin/bash -c "python main.py"
+    volumes:
+      - type: bind
+        source: ./api
+        target: /app
+      - type: bind
+        source: ./algorithms
+        target: /algorithms
+    environment:
+      AUTHOR: "shivam6862"
+    env_file:
+      - api/.env
+    networks:
+      - api_network
+
+  web:
+    build:
+      context: .
+      dockerfile: ./docker/web.Dockerfile
+      target: ${DOCKER_TARGET}
+    ports:
+      - "3000:3000"
+    container_name: web-cpu-scheduler
+    working_dir: /web
+    command: npm start
+    depends_on:
+      - api
+    volumes:
+      - type: bind
+        source: ./web
+        target: /web
+      - /web/node_modules
+    environment:
+      NEXT_PUBLIC_BACKEND_URL: http://api:5000
+    env_file:
+      - web/.env
+    networks:
+      - api_network
+
+networks:
+  api_network:
+    driver: bridge
