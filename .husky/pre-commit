@@ -2,14 +2,14 @@
 
 echo "Checking for changes in web/src..."
 if git diff --quiet HEAD web/src; then
-  echo "No changes detected in web/src. Skipping build..."
+  echo "No changes in web/src"
 else
-  echo "Changes detected in web/src. Running npm run build..."
+  echo "Linting files..."
   cd web
-  if npm run build; then
-    echo "Build successful. Proceeding..."
+  if npx lint-staged; then
+    echo "Linting files... Done"
   else
-    echo "Build failed. Please fix the errors and try again."
+    echo "Linting failed. Please fix the errors and try again."
     exit 1
   fi
 fi
