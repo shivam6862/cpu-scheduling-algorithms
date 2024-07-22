@@ -141,11 +141,11 @@ The backend is implemented in Python. It uses a virtual environment for managing
 
 ## Frontend Input Page
 
-![image.png](/input.png)
+![image.png](/docs/input.png)
 
 ## Frontend Output Page
 
-![image.png](/image.png)
+![image.png](/docs/image.png)
 
 ## Summary
 

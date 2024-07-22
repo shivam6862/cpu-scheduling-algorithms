@@ -11,10 +11,9 @@ interface Row {
 }
 
 export const ParseData = (text: string): Algorithm[] => {
-  const lines = text.trim().split("\r\n");
+  const lines = text.trim().split("\n");
   const algorithms: Algorithm[] = [];
   let currentAlgorithm: Algorithm | null = null;
-
   lines.forEach((line) => {
     if (
       line.startsWith("First Come First Serve") ||
