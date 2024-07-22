@@ -1,10 +1,15 @@
 #!/bin/bash
 
-echo "Running npm run build to ensure the project builds successfully..."
-cd web
-if npm run build; then
-  echo "Build successful. Proceeding with commit..."
+echo "Checking for changes in web/src..."
+if git diff --quiet HEAD web/src; then
+  echo "No changes detected in web/src. Skipping build..."
 else
-  echo "Build failed. Aborting commit..."
-  exit 1
+  echo "Changes detected in web/src. Running npm run build to ensure the project builds successfully..."
+  cd web
+  if npm run build; then
+    echo "Build successful. Proceeding with commit..."
+  else
+    echo "Build failed. Aborting commit..."
+    exit 1
+  fi
 fi
