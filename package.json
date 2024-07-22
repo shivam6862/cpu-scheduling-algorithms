@@ -1,0 +1,27 @@
+{
+  "name": "cpu-scheduling-algorithms",
+  "version": "1.0.0",
+  "description": "CPU scheduling algorithms are crucial for managing how processes are assigned to the CPU for execution. Effective scheduling maximizes CPU utilization, minimizes wait time, and ensures fair resource distribution among processes. Here’s an in-depth look at various CPU scheduling algorithms and key terms used in scheduling:",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "workspaces": {
+    "packages": [
+      "api",
+      "web"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky",
+    "build": "npm workspace @cpu-scheduling-algorithms/web build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^9.7.0",
+    "husky": "^9.1.1"
+  }
+}
