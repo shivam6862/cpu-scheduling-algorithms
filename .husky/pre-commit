@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo "Running npm run build to ensure the project builds successfully..."
+echo "Linting files..."
 cd web
-if npm run build; then
-  echo "Build successful. Proceeding with commit..."
+if npx lint-staged; then
+  echo "Linting files... Done"
 else
-  echo "Build failed. Aborting commit..."
+  echo "Linting failed. Please fix the errors and try again."
   exit 1
 fi
