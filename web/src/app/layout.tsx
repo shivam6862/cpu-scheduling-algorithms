@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "CPU Scheduler Visualizations",
-  description: "Visualizations of CPU scheduling algorithms By Shivam Kumar",
+  description: "Visualizations of CPU scheduling algorithms By Shivam6862",
 };
 
 export default function RootLayout({
